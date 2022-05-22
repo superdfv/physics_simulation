@@ -1,4 +1,5 @@
 import pygame
+import sys
 
 class Configuracion():
     #store all settings for test
@@ -15,3 +16,7 @@ class Configuracion():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+                elif event.type == pygame.KEYDOWN:
+                    #close game with ´q´
+                    if event.key == pygame.K_q:
+                         sys.exit()
